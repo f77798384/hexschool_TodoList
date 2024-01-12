@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo+Tamma+2:600, 700");
+*{
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(
+    174deg,
+    #ffd370 2%,
+    #ffd370 46%,
+    #ffffff 46%,
+    #ffffff 100%,
+    #e8e8e8 100%
+    );
+    letter-spacing: 0.07em;
+}
+.container {
+    margin: 0 auto;
+    width: 500px;
+    font-size: 16px;
+    padding: 20px 0;
+}
+h1{
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Baloo Tamma 2";
+    padding: 20px;
+}
+.create{
+    max-width: 100%;
+    display: flex;
+    border: 1px solid #777777;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    & input{
+        width: 100%;
+        font-size: 1rem;
+        border: 0;
+        outline: 0;
+        padding: 10px 20px;
+    }
+    & .save{
+        font-size: 1rem;
+        color: white;
+        background-color: #333333;
+        border-radius: 20%;
+        padding: 0 10px;
+        cursor: pointer;
+    }
+}
+.todolist {
+    font-size: 1rem;
+    border: 1px solid #777777;
+    border-radius: 10px;
+    background-color: #fff;
+    & .tab{
+        display: flex;
+        justify-content: space-around;
+        & .active{
+            color: black;
+            border-bottom: black 3px solid;
+            font-size: 1.2rem;
+        }
+    }
+    & .tab li{
+        border-bottom: #ffd370 2px solid;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        font-weight: bold;
+        color: #9f9a91;
+        border-bottom: #9f9a91 2px solid;
+        cursor: pointer;
+        &:hover{
+            font-size: 1.2rem;
+            color: #ffd370;
+        }
+    }
+}
+.list li{
+    padding: 25px 10px;
+    font-size: 1rem;
+    list-style: none;
+    position: relative;
+    & .checkbox{
+        opacity: 0;
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 90%;
+        height: 80%;
+        z-index: 1;
+        cursor: pointer;
+    }
+    & .box{
+        border: 1px solid black;
+        border-radius: 20%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffd370;
+        font-size: 1.5rem;
+    }
+    & .content{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 60px;
+        width: 75%;
+        border-bottom: #EFEFEF solid 1px;
+        padding: 20px 0;
+    }
+    &:hover .content{
+        font-size: 1.5rem;
+    }
+    & .done{
+        color: gray;
+        text-decoration: line-through;
+    }
+    & .fun{
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        opacity: 0;
+    }
+    &:hover .fun{
+        opacity: 1;
+        transition: all 1s;
+    }
+    & button{
+        font-size: 1rem;
+        color: white;
+        background-color: #333333;
+        border-radius: 20%;
+        height: 30px;
+        width: 30px;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & a,span{
+        text-decoration: none;
+        padding: 20px 20px;
+    }
+    & a{
+        color: #9F9A91;
+        &:hover{
+            color: #ffd370;
+        }
+    }
+}
