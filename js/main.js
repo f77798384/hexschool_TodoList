@@ -5,7 +5,7 @@ const tab = document.querySelector('.todolist .tab');
 const todolist = document.querySelector('.todolist .list');
 const footer = document.querySelector('.footer');
 const count = document.querySelector('.footer .Statistics')
-let data = JSON.parse(localStorage.getItem(localdata))||[];
+let data = JSON.parse(localStorage.getItem('localdata'))||[];
 let tabstatus = 'all'
 //資料格式
 // data = [
