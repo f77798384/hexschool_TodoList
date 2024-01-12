@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js課程測試</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/all.css" crossorigin="anonymous">
+    <!-- <script src="js/main.js"></script> -->
+</head>
+<body>
+    <div class="container" translate="no">
+        <h1>TODO LIST</h1>
+        <div class="create">
+            <input type="text" class="task" id="task" placeholder="請輸入待辦事項">
+            <button class="save fa-solid fa-plus"></button>
+        </div>
+        <div class="todolist">
+            <ul class="tab">
+                <li class="active">全部</li>
+                <li>待完成</li>
+                <li>已完成</li>
+            </ul>
+            <ul class="list">
+            </ul>
+            <div class="footer">
+                <span class="Statistics">
+                    0 個待完成項目
+                </span>
+                <a href="#" class="cleanAll">
+                    清除所有項目
+                </a>
+                <a href="#" class="clean">
+                    清除已完成項目
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
