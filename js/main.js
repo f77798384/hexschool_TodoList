@@ -136,8 +136,6 @@ todolist.addEventListener('click',function(e){
         data[parseInt(num)].content;
     }else{
         data[num].content= text;
-        //修改內容後變更為未完成
-        data[num].status = false;
     }
     //刷新頁面
     renderData();
