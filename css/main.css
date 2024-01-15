@@ -79,18 +79,23 @@ h1{
         }
     }
 }
+.list{
+    margin: 0px 10px 20px 10px;
+}
 .list li{
-    padding: 25px 10px;
     font-size: 1rem;
     list-style: none;
     position: relative;
+    display: flex;
+    align-items: center;
     & .checkbox{
         opacity: 0;
         left: 0;
-        top: 0;
+        top: 50%;
+        transform: translateY(-50%);
         position: absolute;
         width: 90%;
-        height: 80%;
+        height: 90%;
         z-index: 1;
         cursor: pointer;
     }
@@ -106,28 +111,24 @@ h1{
         font-size: 1.5rem;
     }
     & .content{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 60px;
-        width: 75%;
+        width: 70%;
         border-bottom: #EFEFEF solid 1px;
-        padding: 20px 0;
+        word-wrap: break-word;
+        flex-grow:1;
+        padding: 20px 10px 10px 10px;
     }
     &:hover .content{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     & .done{
         color: gray;
         text-decoration: line-through;
     }
     & .fun{
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
+        width: 30px;
         display: flex;
         flex-direction: column;
+        padding-right: 10px;
         z-index: 2;
         opacity: 0;
     }
