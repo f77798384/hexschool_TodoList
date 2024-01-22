@@ -4,9 +4,9 @@ const save = document.querySelector('.save');
 const tab = document.querySelector('.todolist .tab');
 const todolist = document.querySelector('.todolist .list');
 const footer = document.querySelector('.footer');
-const count = document.querySelector('.footer .Statistics')
+const count = document.querySelector('.footer .Statistics');
 let data = JSON.parse(localStorage.getItem('localdata'))||[];
-let tabstatus = 'all'
+let tabstatus = 'all';
 //資料格式
 // data = [
 //     {
@@ -78,9 +78,9 @@ function renderData() {
     })
     //刷新待完成數量
     let total = data.filter(function(item){
-        return item.status == false
+        return item.status == false;
     })
-    count.textContent = `${total.length} 個待完成項目`
+    count.textContent = `${total.length} 個待完成項目`;
     //顯示於頁面上
     todolist.innerHTML = str;
 }
@@ -171,7 +171,7 @@ footer.addEventListener('click',function(e){
     }
     e.preventDefault();
     //只保留未完成內容回傳給data
-    data = []
+    data = [];
     //刷新頁面
     renderData();
 })
@@ -179,13 +179,13 @@ footer.addEventListener('click',function(e){
 tab.addEventListener('click',function(e){
     switch(e.target.textContent){
         case '全部':
-            tabstatus = 'all'
+            tabstatus = 'all';
             break;
         case '待完成':
-            tabstatus = false
+            tabstatus = false;
             break;
         case '已完成':
-            tabstatus = true
+            tabstatus = true;
             break;
     }
     if(e.target.nodeName !=="LI"||e.target.getAttribute('class')=='active'){

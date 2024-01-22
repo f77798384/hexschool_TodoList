@@ -88,6 +88,7 @@ h1{
     position: relative;
     display: flex;
     align-items: center;
+    padding-top: 5px;
     & .checkbox{
         opacity: 0;
         left: 0;
@@ -115,7 +116,7 @@ h1{
         border-bottom: #EFEFEF solid 1px;
         word-wrap: break-word;
         flex-grow:1;
-        padding: 20px 10px 10px 10px;
+        padding: 30px 10px;
     }
     &:hover .content{
         font-size: 1.2rem;
@@ -131,6 +132,9 @@ h1{
         padding-right: 10px;
         z-index: 2;
         opacity: 0;
+        @media(max-width:575px){
+            opacity: 1;
+        }
     }
     &:hover .fun{
         opacity: 1;
