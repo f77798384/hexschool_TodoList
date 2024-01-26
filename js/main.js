@@ -64,7 +64,7 @@ function renderData() {
         //加入HTML字串
         str += `
         <li data-num = "${index}">
-            <input type="checkbox" name="" id="" class="checkbox" ${cla_status.checkbox}>
+            <input type="checkbox" class="checkbox" ${cla_status.checkbox}>
             <span class="box ${cla_status.box}">
             </span>
             <span class="content ${cla_status.content}">
